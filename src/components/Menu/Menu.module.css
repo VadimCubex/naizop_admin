@@ -1,0 +1,30 @@
+.menu {
+  display: flex;
+  background: rgb(248, 248, 248);
+  border-bottom-color: rgb(231, 231, 231);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.menu nav {
+  display: flex;
+}
+
+.menu nav ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+}
+
+.menu nav ul li {
+  padding: 10px;
+}
+
+.menu nav ul li.active {
+  background: rgb(231, 231, 231);
+}
+
+.menu nav ul li a {
+  color: var(--black);
+}

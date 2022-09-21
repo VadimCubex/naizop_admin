@@ -1,0 +1,58 @@
+.btn-container {
+  position: relative;
+}
+
+.button {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  padding: 8px;
+  overflow: hidden;
+  background: #ffffff;
+  color: var(--black);
+  cursor: pointer;
+  border: 1px solid #c9c9c9;
+  border-radius: 3px;
+}
+
+.button > div {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  gap: 8px;
+}
+
+.button:hover {
+  background: #e7e7e7;
+}
+
+.button:active {
+  background: #f5f5f5;
+}
+
+.button.disabled {
+  background: #cecece;
+}
+
+/* Width button */
+
+.button_width_full {
+  width: 100%;
+}
+
+/* Variant icon position */
+
+.button_icon_position_left > div {
+  flex-direction: row;
+}
+
+.button_icon_position_right > div {
+  flex-direction: row-reverse;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}

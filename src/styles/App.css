@@ -1,0 +1,16 @@
+main {
+  color: var(--black);
+}
+
+.App {
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  padding: 0px 10px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
