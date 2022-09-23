@@ -1,0 +1,23 @@
+.services {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.services .services-tools {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services .services-tools .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.services .services-tools .import {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.services .services-tools .import > .text {
+  color: rgb(39, 73, 138);
+}

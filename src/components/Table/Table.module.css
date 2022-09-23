@@ -1,62 +1,31 @@
-@import "./TableVariantsStyles/TableVariantSubscriptions.module.css";
+@import "./TableVariantsStyles/TableVariantUsers.module.css";
+@import "./TableVariantsStyles/TableVariantServices.module.css";
 
 .table {
+  min-width: 1325px;
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-top: 20px;
+  border: 1px solid rgb(201, 201, 201);
 }
 
-.table .table-hr {
-  transition: var(--transition-property) 0s var(--transition-function);
-  margin: 0px;
-  border: none;
-  height: 1px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.table .table-separators {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 20px;
-  z-index: 0;
-}
-
-.table .table-small-header [class*="table-column-cell"],
-.table .table-header [class*="table-column-cell"] {
-  color: var(--white);
-  opacity: 0.5;
-}
-
-.table .table-header [class*="table-column-cell"] {
-  padding-left: 20px;
-  padding-bottom: 10px;
-}
-
-.table .table-separators [class*="table-column-cell"] {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.table .table-separators [class*="table-column-cell"] hr {
-  margin: 0px;
-  border: none;
-  width: 1px;
-  height: 100%;
-
-  background: linear-gradient(
-    360deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
-}
-
-.table .table-content,
-.table .table-header {
+.table .table-content {
   position: relative;
   z-index: 1;
+}
+
+.table .table-header {
+  position: relative;
+  z-index: 2;
+}
+
+.table .table-header .text {
+  margin-top: 2px;
+}
+
+.table .table-row:hover,
+.table .table-header {
+  background: #f8f8f8;
 }
 
 .table .table-content,
@@ -64,135 +33,88 @@
   flex-direction: column;
 }
 
-.table .table-separators,
 .table .table-content .table-row,
 .table .table-header {
+  border-bottom: 1px solid rgb(201, 201, 201);
   display: flex;
 }
 
-.table .table-content .table-row .table-small-row-content {
-  display: none;
+.table .table-content .table-row:last-child {
+  border-bottom: unset;
 }
 
-.table .table-content .table-row .table-row-border {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(
-    270deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.1) 53.13%,
-    rgba(255, 255, 255, 0) 100%
-  );
+.table .table-header [class*="table-column-cell"] {
+  gap: 4px;
 }
 
+.table .table-header [class*="table-column-cell"],
 .table .table-row [class*="table-row-cell"] {
-  padding: 15px 0px 15px 20px;
-}
-
-.table .table-row [class*="table-row-cell"] .text {
-  color: var(--white);
-}
-
-.table-modal .modal-container {
-  width: 440px;
-}
-
-.table-modal .button-modal {
-  padding: 40px 20px 45px;
-}
-
-.table-modal .button-modal .button {
-  width: 100%;
-}
-.table-modal .modal-hr {
-  background: linear-gradient(
-    270deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.1) 53.13%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  width: 100%;
-  height: 1px;
-}
-
-.table-modal .modal-trustpilot {
-  padding: 15px 20px 25px;
-  display: flex;
-  gap: 14px;
-}
-
-.table-modal .modal-trustpilot .text {
-  color: var(--white);
-}
-
-.table-modal .modal-trustpilot > div:first-child {
+  padding: 8px 4px 8px 8px;
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
-.table-modal .modal-trustpilot .trustpilot-reviews {
-  display: flex;
-  gap: 7px;
-  align-items: center;
+.table .table-row [class*="table-row-cell"] .button {
+  padding: 4px 6px;
 }
 
-.table-modal
-  .modal-trustpilot
-  .trustpilot-reviews
-  .text.text_variant_h4_regular {
-  font-size: 16px;
-  line-height: 26px;
+.table .table-row [class*="table-row-cell"] .button > div {
+  gap: 5px;
 }
 
-.table-modal
-  .modal-trustpilot
-  .trustpilot-reviews
-  .text.text_variant_h4_regular
+.table .button > div .svgIcon {
+  width: 7px !important;
+  height: 7px !important;
+  stroke: unset !important;
+}
+.table .table-row [class*="table-row-cell"] .button > div path {
+  fill: #000;
+}
+
+.table .table-row [class*="table-row-cell"] .button .text {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.table .dropDown {
+  top: 120%;
+  right: -1px;
+  left: unset;
+  padding: 4px 0px;
+}
+
+.table .action-item {
+  padding: 5px 15px;
+}
+
+.table .action-item:hover {
+  background: rgb(231, 231, 231);
+}
+
+.table .action-item .text {
+  text-align: left;
+  display: block;
+  font-size: 14px !important;
+  line-height: 20px !important;
+}
+
+.table
+  .table-header
+  [class*="table-column-cell"]
+  .button
+  > div:not(.dropDown)
   > .text {
   font-weight: 700;
 }
 
-.table-modal .modal-trustpilot .trustpilot-reviews > div .text {
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 26px;
+.table .table-row .table-row-content.suspended .text {
+  color: rgb(187, 187, 187);
 }
 
-.table-modal .modal-trustpilot .trustpilot-reviews > div {
-  display: flex;
-  gap: 4px;
-  align-items: center;
+.table .table-row .table-row-content.suspended .text.status {
+  border: 1px solid rgb(187, 187, 187);
 }
 
-.table-modal .modal-trustpilot .trustpilot-stars {
-  display: flex;
-  gap: 2px;
-}
-
-.table-modal .modal-trustpilot .svgIcon path {
-  stroke: transparent !important;
-}
-
-@media (max-width: 834px) {
-  .table-modal .modal-container {
-    width: 400px;
-  }
-  .table-modal .modal-trustpilot {
-    padding: 15px 20px 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .table-modal .modal-trustpilot > div {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 425px) {
-  .table-modal .modal-trustpilot,
-  .table-modal .modal-hr {
-    display: none;
-  }
+.table .table-row .table-row-content.suspended .button.actions .text {
+  color: #000;
 }

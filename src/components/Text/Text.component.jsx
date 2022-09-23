@@ -1,13 +1,9 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classnames";
 
-export const TextComponent = ({
-  variant,
-  className,
-  children
-}) => {
+export const TextComponent = ({ variant, className, onClick, children }) => {
   const TextClass = classNames(
-    'text',
+    "text",
     {
       [`text_variant_${variant}`]: variant,
     },
@@ -15,8 +11,10 @@ export const TextComponent = ({
   );
 
   return (
-    <span className={TextClass}>{children}</span>
+    <span onClick={onClick} className={TextClass}>
+      {children}
+    </span>
   );
 };
 
-TextComponent.displayName = 'Text';
+TextComponent.displayName = "Text";

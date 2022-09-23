@@ -4,6 +4,7 @@ export const TextVariants = {
   h3: "h3",
   h4: "h4",
   h5: "h5",
+  subtitle_bold: "subtitle_bold",
   subtitle_medium: "subtitle_medium",
   subtitle_small: "subtitle_small",
   h1_medium: "h1_medium",
@@ -15,34 +16,6 @@ export const TextVariants = {
 };
 
 export const IconsVariants = {
-  // Bulk
-  TrackOrder: "/icons/Bulk/Track.svg",
-  VipReward: "/icons/Bulk/Vip reward.svg",
-  Add_funds: "/icons/Bulk/Add funds.svg",
-  Affiliates: "/icons/Bulk/Affiliates.svg",
-  All_services: "/icons/Bulk/All services.svg",
-  Api: "/icons/Bulk/Api.svg",
-  Blog: "/icons/Bulk/Blog.svg",
-  Complited_Orders: "/icons/Bulk/Complited Orders.svg",
-  FAQ: "/icons/Bulk/FAQ.svg",
-  Favorites: "/icons/Bulk/Favorites.svg",
-  Info_Circle: "/icons/Bulk/Info Circle.svg",
-  Logout: "/icons/Bulk/Logout.svg",
-  Mass_order: "/icons/Bulk/Mass order.svg",
-  New_order: "/icons/Bulk/New order.svg",
-  Notification_new: "/icons/Bulk/Notification new.svg",
-  Notification: "/icons/Bulk/Notification.svg",
-  Popular: "/icons/Bulk/Popular.svg",
-  Subscriptions_new: "/icons/Bulk/Subscriptions new.svg",
-  Subscriptions: "/icons/Bulk/Subscriptions.svg",
-  Support_new: "/icons/Bulk/Support new.svg",
-  Support: "/icons/Bulk/Support.svg",
-  Terms: "/icons/Bulk/Terms.svg",
-  Tools: "/icons/Bulk/Tools.svg",
-  Updates: "/icons/Bulk/Updates.svg",
-  LogoLeft: "/icons/Bulk/logoLeft.svg",
-  LogoRight: "/icons/Bulk/logoRight.svg",
-  // Stroke
   Add_funds_stroke: "/icons/Stroke/Add funds.svg",
   Affiliates_stroke: "/icons/Stroke/Affiliates.svg",
   Api_stroke: "/icons/Stroke/Api.svg",
@@ -109,45 +82,10 @@ export const IconsVariants = {
   Purchase: "/icons/Stroke/Purchase.svg",
   Wallet: "/icons/Stroke/Wallet.svg",
   SoundOff: "/icons/Stroke/Sound off.svg",
-  // Color
-  Bitcoin: "/icons/Color/Bitcoin.svg",
-  Crypto: "/icons/Color/Crypto.svg",
-  Discord_color: "/icons/Color/Discord.svg",
-  Facebook_color: "/icons/Color/Facebook.svg",
-  Google_color: "/icons/Color/Google.svg",
-  Instagram_color: "/icons/Color/Instagram.svg",
-  Linkedin: "/icons/Color/Linkedin.svg",
-  Medium: "/icons/Color/Medium.svg",
-  Payeer: "/icons/Color/Payeer.svg",
-  Payop: "/icons/Color/Payop.svg",
-  Perfect_money: "/icons/Color/Perfect money.svg",
-  Quora: "/icons/Color/Quora.svg",
-  Reddit: "/icons/Color/Reddit.svg",
-  Snapchat_color: "/icons/Color/Snapchat.svg",
-  Spotify_color: "/icons/Color/Spotify.svg",
-  Telegram_color: "/icons/Color/Telegram.svg",
-  Tiktok_color: "/icons/Color/Tiktok.svg",
-  Twitch_color: "/icons/Color/Twitch.svg",
-  Twitter_color: "/icons/Color/Twitter.svg",
-  Youtube_color: "/icons/Color/Youtube.svg",
-  Trustpilot: "/icons/Color/Trustpilot.svg",
-  Step_arrow: "/icons/Color/Step.svg",
-  Line: "/icons/Color/Line.svg",
-  Skype: "/icons/Color/Skype.svg",
-  Pinterest: "/icons/Color/Pinterest.svg",
-  Whatsapp: "/icons/Color/Whatsapp.svg",
-  Gmail: "/icons/Color/Gmail.svg",
-  Odnoklassniki: "/icons/Color/Odnoklassniki.svg",
-  VK: "/icons/Color/VK.svg",
 
-  Heart_2: "/icons/Best/Heart.svg",
-  Comments: "/icons/Best/Comments.svg",
-  Send: "/icons/Best/Send.svg",
-  User: "/icons/Best/User.svg",
-
-  Logo: "/logo.svg",
-  Logo_2: "/logo 2.svg",
-  Arc: "/icons/Color/arc.svg",
+  User: "/icons/Admin/User.svg",
+  Skype: "/icons/Admin/skype.svg",
+  DragAndDrop: "/icons/Admin/drag&drop.svg",
 };
 
 export const RanksIcons = {
@@ -159,40 +97,6 @@ export const RanksIcons = {
   Silver: "/icons/Ranks/Silver.png",
   VIP3: "/icons/Ranks/VIP III.png",
   VIP: "/icons/Ranks/VIP.png",
-};
-
-export const FlagsIcons = {
-  Australia: "/icons/Flags/Australia.svg",
-  United_States: "/icons/Flags/United States.svg",
-  Ukraine: "/icons/Flags/Ukraine.svg",
-  Sweden: "/icons/Flags/Sweden.svg",
-  United_Kingdom: "/icons/Flags/United Kingdom.svg",
-  Canada: "/icons/Flags/Canada.svg",
-};
-
-export const GradientIcons = {
-  News: "/icons/Gradient/News.png",
-  Other: "/icons/Gradient/Other.png",
-  Question: "/icons/Gradient/Question.png",
-  Services: "/icons/Gradient/Services.png",
-  Social: "/icons/Gradient/Social Media.png",
-};
-
-export const PaymentsIcons = {
-  Payment1: "/icons/Payments/Payment Icons-4.svg",
-  Payment2: "/icons/Payments/Payment Icons-3.svg",
-  Payment3: "/icons/Payments/Payment Icons-2.svg",
-  Payment4: "/icons/Payments/Payment Icons-1.svg",
-  Payment5: "/icons/Payments/Payment Icons.svg",
-};
-
-export const CryptoIcons = {
-  Crypto1: "/icons/Payments/Cryptocurrency.png",
-  Crypto2: "/icons/Payments/Cryptocurrency-1.png",
-  Crypto3: "/icons/Payments/Cryptocurrency-2.png",
-  Crypto4: "/icons/Payments/Cryptocurrency-3.png",
-  Crypto5: "/icons/Payments/Cryptocurrency-4.png",
-  Crypto6: "/icons/Payments/Cryptocurrency-5.png",
 };
 
 export const ColorSvgVariants = {
@@ -257,22 +161,12 @@ export const DropDownVariants = {
 };
 
 export const SelectOptionVariants = {
-  Detail: "detail",
-  WithoutDeteil: "nodeteil",
   Default: "default",
-  Format: "format",
 };
 
 export const TableVariants = {
-  Ranks: "ranks",
-  Redeem: "redeem",
-  Subscriptions: "subscriptions",
-  Orders: "orders",
-  Service: "service",
-  Service_detail: "serviceDetail",
-  Payment: "payment",
-  Completed: "completed",
-  Affiliates: "affiliates",
+  Users: "users",
+  Services: "services",
 };
 
 export const TabsVariants = {

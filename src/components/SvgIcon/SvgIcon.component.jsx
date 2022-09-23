@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { ReactSVG } from "react-svg";
+
 import "./SvgIcon.module.css";
 
 export const SvgIconComponent = ({
@@ -23,7 +24,7 @@ export const SvgIconComponent = ({
     className
   );
 
-  const stroke = defaultStroke ? {} : { stroke: `var(--${color})` };
+  const stroke = defaultStroke ? {} : { stroke: color };
 
   const customStyles = {
     width: `${size}px`,

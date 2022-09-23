@@ -17,6 +17,7 @@
 @import "../components/Checkbox/Checkbox.module.css";
 @import "../components/Pagination/Pagination.module.css";
 @import "../components/ProgressBar/ProgressBar.module.css";
+@import "../components/Filter/Filter.module.css";
 
 @import "./App.css";
 @import "./normalize.css";
@@ -26,6 +27,7 @@
 @import "../pages/About/About.module.css";
 @import "../pages/Blog/Blog.module.css";
 @import "../pages/Tools/Tools.module.css";
+@import "../pages/Services/Services.module.css";
 
 :root {
   --transition-property: all;

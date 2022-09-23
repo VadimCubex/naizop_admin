@@ -1,12 +1,22 @@
 .input {
   display: flex;
+  align-items: center;
   position: relative;
   overflow: hidden;
   width: 100%;
   height: fit-content;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  background: rgba(30, 33, 36, 0.25);
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 4px;
+  max-height: 32px;
+}
+
+.input .leftSide {
+  padding: 6px 0px 6px 6px;
+}
+
+.input .leftSide i {
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .input input,
@@ -14,18 +24,17 @@
   border: none;
   background: none;
   display: inline-block;
-  font-family: "Space Grotesk";
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
   letter-spacing: 0em;
   flex-grow: 1;
-  padding: 20px;
-  color: var(--white);
+  padding: 8px;
+  min-width: 100px;
 }
 
 .input input {
-  max-height: 60px;
+  max-height: 30px;
 }
 
 .input textarea {
@@ -35,7 +44,6 @@
 
 .input input::placeholder,
 .input textarea::placeholder {
-  color: var(--white);
   opacity: 0.5;
 }
 
@@ -52,16 +60,4 @@
 .input .svgIcon {
   cursor: pointer;
   margin: 18px 20px;
-}
-
-@media (max-width: 834px) {
-  .input input {
-    max-height: 50px;
-    padding: 15px 20px;
-  }
-
-  .input .svgIcon {
-    cursor: pointer;
-    margin: 13px 13px;
-  }
 }

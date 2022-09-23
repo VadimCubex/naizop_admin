@@ -5,9 +5,25 @@
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
+.menu > div {
+  flex-grow: 1;
+}
 
 .menu nav {
+  flex-grow: 1;
   display: flex;
+  justify-content: space-between;
+}
+
+.menu nav .profile {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu nav .profile:hover {
+  background: rgb(231, 231, 231);
 }
 
 .menu nav ul {
@@ -18,7 +34,11 @@
 }
 
 .menu nav ul li {
-  padding: 10px;
+  padding: 16px;
+}
+
+.menu nav ul li:hover {
+  background: rgb(241, 241, 241);
 }
 
 .menu nav ul li.active {

@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 
-import { DropDownVariants } from "../../constants/VariantsOfComponents";
+import {
+  DropDownVariants,
+  TextVariants,
+} from "../../constants/VariantsOfComponents";
 import { DropDown, DropDownOpenButton } from "../DropDown";
 import { SelectOption } from "../SelectOption";
+import { Text } from "../Text";
 
 export const SelectComponent = ({
   value,
@@ -12,6 +16,8 @@ export const SelectComponent = ({
   options,
   variant,
   maxHeight,
+  isStaticTitle,
+  title,
   onClick,
   className,
 }) => {
@@ -34,15 +40,19 @@ export const SelectComponent = ({
   return (
     <div className="select-container">
       <div className={SelectClass}>
-        <div className="select-info">
-          <SelectOption value={value} variant={variant} selected={true} />
+        <div
+          onClick={() => {
+            setIsShowDropDown(!isShowDropDown);
+          }}
+          className="select-info cursor-pointer"
+        >
+          {isStaticTitle ? (
+            <Text variant={TextVariants.subtitle_medium}>{title}</Text>
+          ) : (
+            <SelectOption value={value} variant={variant} selected={true} />
+          )}
           <div>
-            <DropDownOpenButton
-              isOpen={isShowDropDown}
-              onClick={() => {
-                setIsShowDropDown(!isShowDropDown);
-              }}
-            />
+            <DropDownOpenButton isOpen={isShowDropDown} />
           </div>
         </div>
       </div>

@@ -9,35 +9,24 @@
 }
 
 .checkbox input + label .dot {
-  border-radius: 3px;
-  width: 12px;
-  height: 12px;
-  background: var(--gradient-green-yellow);
+  border-radius: 2px;
+  width: 8px;
+  height: 8px;
+  background: #000000;
   opacity: 0;
 }
 
 .checkbox input + label .border {
   justify-content: center;
   align-items: center;
-  width: 18px;
-  height: 18px;
+  width: 12px;
+  height: 12px;
   display: inline-flex;
   background: transparent;
-  border-radius: 6px;
-  border: 1px solid var(--white);
+  border-radius: 2px;
+  border: 1px solid rgb(201, 201, 201);
 }
 
 .checkbox input:checked + label .dot {
   opacity: 1;
-}
-
-@media (max-width: 834px) {
-  .checkbox input + label .border {
-    width: 30px;
-    height: 30px;
-  }
-  .checkbox input + label .dot {
-    width: 20px;
-    height: 20px;
-  }
 }

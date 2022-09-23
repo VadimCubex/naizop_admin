@@ -44,6 +44,9 @@ export const MenuComponent = () => {
               </li>
             ))}
           </ul>
+          <div className="profile">
+            <i className="fas fa-user-circle" />
+          </div>
         </nav>
       </div>
     </header>

@@ -1,52 +1,69 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 
+import { ServiceCategoryActions } from "./constants";
 import {
   DropDownVariants,
+  IconsVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
-import { DropDown, DropDownOpenButton } from "../DropDown";
+import { Button } from "../Button";
+import { DropDown } from "../DropDown";
 import { SvgIcon } from "../SvgIcon";
 import { Text } from "../Text";
 
-export const AccordionComponent = ({
-  icon,
-  title,
-  children,
-  badges,
-  className,
-}) => {
+export const AccordionComponent = ({ category, children, className }) => {
   const [isShowDropDown, setIsShowDropDown] = useState(false);
+  const [isOpenActions, setIsOpenActions] = useState(false);
+
   const AccordionClass = classNames("accordion", className);
 
   return (
     <div className="accordion-container">
       <div className={AccordionClass}>
-        <div className="accordion-info">
-          <div className="accordion-title">
-            <div className="accordion-title-contant">
-              <SvgIcon src={icon} size={24} />
-              <Text variant={TextVariants.h4}>{title}</Text>
-            </div>
-            {badges && (
-              <div className="accordion-badges">
-                {badges.map((item, index) => (
-                  <div key={index} className="badge">
-                    <Text variant={TextVariants.h5}>{item}</Text>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-          <div className="accordion-button-container">
-            <DropDownOpenButton
-              isOpen={isShowDropDown}
-              onClick={() => {
-                setIsShowDropDown(!isShowDropDown);
-              }}
-            />
-          </div>
+        <div className="accordion-title">
+          <SvgIcon
+            className="drag-drop-icon"
+            src={IconsVariants.DragAndDrop}
+            size={12}
+          />
+          <Text variant={TextVariants.subtitle_medium}>
+            {category.title ? category.title : "Not Assigned"}
+          </Text>
+          <Button
+            className={classNames("actions", { active: isOpenActions })}
+            onClick={() => setIsOpenActions(!isOpenActions)}
+            text="Actions"
+            iconPosition="right"
+            icon={IconsVariants.DropDown_arrow_fill}
+          >
+            <DropDown isOpen={isOpenActions}>
+              {ServiceCategoryActions.map((text, index) => (
+                <div
+                  key={index}
+                  onClick={() => {
+                    setIsOpenActions(false);
+                  }}
+                  className="action-item cursor-pointer"
+                >
+                  <Text variant={TextVariants.subtitle_medium}>{text}</Text>
+                </div>
+              ))}
+            </DropDown>
+          </Button>
         </div>
+        {category.services && (
+          <div className="cursor-pointer show">
+            <Text
+              onClick={() => setIsShowDropDown(!isShowDropDown)}
+              variant={TextVariants.subtitle_medium}
+            >
+              {isShowDropDown ? "Hide" : "Show"} services (
+              {category.services.length})
+            </Text>
+            <SvgIcon src={IconsVariants.DropDown_arrow_fill} size={8} />
+          </div>
+        )}
       </div>
       <DropDown variant={DropDownVariants.accordion} isOpen={isShowDropDown}>
         {children}
