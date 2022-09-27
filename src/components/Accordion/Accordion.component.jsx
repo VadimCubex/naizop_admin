@@ -16,7 +16,11 @@ export const AccordionComponent = ({ category, children, className }) => {
   const [isShowDropDown, setIsShowDropDown] = useState(false);
   const [isOpenActions, setIsOpenActions] = useState(false);
 
-  const AccordionClass = classNames("accordion", className);
+  const AccordionClass = classNames(
+    "accordion",
+    { active: isShowDropDown },
+    className
+  );
 
   return (
     <div className="accordion-container">

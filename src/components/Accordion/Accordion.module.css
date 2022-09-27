@@ -9,6 +9,7 @@
   position: relative;
   padding: 0px !important;
   right: 0px !important;
+  overflow: unset;
 }
 
 .accordion {
@@ -17,6 +18,11 @@
   justify-content: space-between;
   background: #f8f8f8;
   padding: 8px;
+  border-bottom: 0px solid rgb(201, 201, 201);
+}
+
+.accordion.active {
+  border-bottom: 1px solid rgb(201, 201, 201);
 }
 
 .accordion .accordion-info {

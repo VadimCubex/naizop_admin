@@ -13,6 +13,7 @@ export const ModalComponent = ({
   isOpen,
   onClick,
   children,
+  footer,
   className,
 }) => {
   const ModalClass = classNames("modal", { active: isOpen }, className);
@@ -28,11 +29,17 @@ export const ModalComponent = ({
         >
           <div className="modal-container">
             <div className="header-modal">
-              <Text variant={TextVariants.h1}>{title}</Text>
-              <SvgIcon src={IconsVariants.Close} size={20} onClick={onClick} />
+              <Text variant={TextVariants.h5_regular}>{title}</Text>
+              <SvgIcon
+                className="cursor-pointer"
+                src={IconsVariants.Close}
+                size={20}
+                onClick={onClick}
+                color={"#000"}
+              />
             </div>
-            <div className="modal-background" />
-            <div className="modal-content">{children}</div>
+            <div className="modal-contant">{children}</div>
+            {footer && <div className="modal-footer">{footer}</div>}
           </div>
         </div>
       </ModalPortal>

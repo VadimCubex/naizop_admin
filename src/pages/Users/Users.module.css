@@ -1,6 +1,8 @@
 .users {
   padding-top: 10px;
   padding-bottom: 10px;
+  position: relative;
+  height: 100%;
 }
 
 .users .users-tools {

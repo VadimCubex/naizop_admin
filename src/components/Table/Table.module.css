@@ -14,6 +14,10 @@
   z-index: 1;
 }
 
+.table .table-row-content {
+  display: flex;
+}
+
 .table .table-header {
   position: relative;
   z-index: 2;
@@ -23,7 +27,7 @@
   margin-top: 2px;
 }
 
-.table .table-row:hover,
+.table:not(.table-variant-services) .table-row:hover,
 .table .table-header {
   background: #f8f8f8;
 }
@@ -37,10 +41,6 @@
 .table .table-header {
   border-bottom: 1px solid rgb(201, 201, 201);
   display: flex;
-}
-
-.table .table-content .table-row:last-child {
-  border-bottom: unset;
 }
 
 .table .table-header [class*="table-column-cell"] {
@@ -113,6 +113,10 @@
 
 .table .table-row .table-row-content.suspended .text.status {
   border: 1px solid rgb(187, 187, 187);
+}
+
+.table .table-row:last-child {
+  border-bottom: unset;
 }
 
 .table .table-row .table-row-content.suspended .button.actions .text {

@@ -4,3 +4,11 @@ export const UsersStatuses = ["All", "Active", "Suspended"];
 export const ServiceStatuses = ["All", "Disabled", "Enabled"];
 export const ServiceTypes = ["All", "Default"];
 export const ServiceProviders = ["All", "naizop.com"];
+export const ServiceActions = [
+  "Edit service",
+  "Edit description",
+  "Disable service",
+  "Delete custom rates",
+  "Duplicate",
+  "Delete service",
+];

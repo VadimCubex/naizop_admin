@@ -24,53 +24,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  color: var(--white);
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
-.header-modal path {
-  stroke: var(--white) !important;
+.modal-footer {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+  border-top: 1px solid #e5e5e5;
 }
 
 .modal-container {
   overflow: hidden;
   position: relative;
-  border: 1px solid var(--light-blue-15);
-  border-radius: 10px;
-  background: var(--menu);
-  width: 400px;
+  border: 1px solid #4a4a4a;
+  border-radius: 5px;
+  background: #fff;
+  width: 480px;
   display: flex;
+  box-shadow: 0px 0px 7px #000;
   flex-direction: column;
 }
 
-.modal-content {
+.modal-contant {
   z-index: 5;
-}
-
-.modal-background {
-  background: var(--light-blue-15);
-  border: 1px solid var(--light-blue-15);
-  border-radius: 10px;
-
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
+  padding: 15px;
 }
 
 .modal .separator {
   border: none;
   width: 100%;
   height: 1px;
-  background: var(--light-blue-15);
+  background: #000;
   margin: 0px;
-}
-
-@media (max-width: 425px) {
-  .modal-container {
-    width: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
 }

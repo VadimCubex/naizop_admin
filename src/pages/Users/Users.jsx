@@ -31,13 +31,11 @@ const Users = () => {
             <Filter placeholder={"Search"} />
           </div>
         </div>
-        <div className="users-content">
-          <Table
-            variant={TableVariants.Users}
-            data={UsersTableInfo}
-            columnNames={UsersTableColumn}
-          />
-        </div>
+        <Table
+          variant={TableVariants.Users}
+          data={UsersTableInfo}
+          columnNames={UsersTableColumn}
+        />
       </div>
     </>
   );

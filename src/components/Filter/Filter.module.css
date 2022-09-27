@@ -1,5 +1,7 @@
 .filter {
+  position: relative;
   display: flex;
+  z-index: 3;
 }
 
 .filter .input {

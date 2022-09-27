@@ -1,19 +1,17 @@
 import React from "react";
-import classNames from "classnames";
 
+import RowService from "./RowService";
 import { Accordion } from "../../Accordion";
 
 const RowServiceCategory = ({ item }) => {
   return (
-    <div
-      className={classNames("table-row-content", { suspended: item.status })}
-    >
+    <>
       <Accordion category={item}>
         {item.services?.map((service, index) => (
-          <div key={index}>{service.id}</div>
+          <RowService key={index} item={service} />
         ))}
       </Accordion>
-    </div>
+    </>
   );
 };
 

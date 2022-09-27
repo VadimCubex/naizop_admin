@@ -67,3 +67,17 @@
   pointer-events: none;
   cursor: not-allowed;
 }
+
+.button.blue {
+  background: #357ab5;
+  border-color: #41678b;
+  color: #fff;
+}
+
+.button.blue:hover {
+  background: #286091;
+}
+
+.button.blue:active {
+  background: #3684c9;
+}

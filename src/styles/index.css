@@ -23,7 +23,6 @@
 @import "./normalize.css";
 
 @import "../pages/Users/Users.module.css";
-@import "../pages/FAQ/FAQ.module.css";
 @import "../pages/About/About.module.css";
 @import "../pages/Blog/Blog.module.css";
 @import "../pages/Tools/Tools.module.css";
@@ -38,12 +37,12 @@
 }
 
 #root {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 html {
   scroll-behavior: smooth;
-  min-height: 100vh;
+  height: 100vh;
   transition: var(--transition-property) 0s var(--transition-function);
   min-width: 280px;
 }

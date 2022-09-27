@@ -2,10 +2,6 @@
   margin-top: 10px;
 }
 
-.table.table-variant-users .table-row-content {
-  display: flex;
-}
-
 .table.table-variant-users .table-header .table-column-cell-1,
 .table.table-variant-users .table-row-content .table-row-cell-1 {
   width: 2.6%;
