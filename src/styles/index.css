@@ -23,7 +23,7 @@
 @import "./normalize.css";
 
 @import "../pages/Users/Users.module.css";
-@import "../pages/About/About.module.css";
+@import "../pages/Orders/Orders.module.css";
 @import "../pages/Blog/Blog.module.css";
 @import "../pages/Tools/Tools.module.css";
 @import "../pages/Services/Services.module.css";

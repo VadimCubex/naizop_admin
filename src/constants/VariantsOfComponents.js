@@ -88,17 +88,6 @@ export const IconsVariants = {
   DragAndDrop: "/icons/Admin/drag&drop.svg",
 };
 
-export const RanksIcons = {
-  Bronze: "/icons/Ranks/Bronze.png",
-  Diamond: "/icons/Ranks/Diamond.png",
-  Gold: "/icons/Ranks/Gold.png",
-  New: "/icons/Ranks/New.png",
-  Platinum: "/icons/Ranks/Platinum.png",
-  Silver: "/icons/Ranks/Silver.png",
-  VIP3: "/icons/Ranks/VIP III.png",
-  VIP: "/icons/Ranks/VIP.png",
-};
-
 export const ColorSvgVariants = {
   unset: "unset",
   inherit: "inherit",
@@ -167,6 +156,9 @@ export const SelectOptionVariants = {
 export const TableVariants = {
   Users: "users",
   Services: "services",
+  Orders: "orders",
+  Tickets: "pickets",
+  Payments: "payments",
 };
 
 export const TabsVariants = {

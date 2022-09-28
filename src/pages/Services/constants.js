@@ -69,7 +69,7 @@ export const ServiceInfo = [
     services: [
       {
         checked: false,
-        id: "1",
+        id: "4",
         service: "Twitter likes",
         type: "Default",
         provider: "naizop.com",
@@ -80,7 +80,7 @@ export const ServiceInfo = [
       },
       {
         checked: false,
-        id: "2",
+        id: "5",
         service: "Twitter views",
         type: "Default",
         provider: "naizop.com",
@@ -91,7 +91,7 @@ export const ServiceInfo = [
       },
       {
         checked: false,
-        id: "3",
+        id: "6",
         service: "Twitter followers",
         type: "Default",
         provider: "naizop.com",
@@ -107,7 +107,7 @@ export const ServiceInfo = [
     services: [
       {
         checked: false,
-        id: "1",
+        id: "7",
         service: "Facebook likes",
         type: "Default",
         provider: "naizop.com",
@@ -118,7 +118,7 @@ export const ServiceInfo = [
       },
       {
         checked: false,
-        id: "2",
+        id: "8",
         service: "Facebook views",
         type: "Default",
         provider: "naizop.com",
@@ -129,7 +129,7 @@ export const ServiceInfo = [
       },
       {
         checked: false,
-        id: "3",
+        id: "9",
         service: "Facebook followers",
         type: "Default",
         provider: "naizop.com",
@@ -145,7 +145,7 @@ export const ServiceInfo = [
     services: [
       {
         checked: false,
-        id: "1",
+        id: "10",
         service: "Twitter likes",
         type: "Default",
         provider: "naizop.com",
@@ -156,7 +156,7 @@ export const ServiceInfo = [
       },
       {
         checked: false,
-        id: "2",
+        id: "11",
         service: "Twitter views",
         type: "Default",
         provider: "naizop.com",
@@ -167,7 +167,7 @@ export const ServiceInfo = [
       },
       {
         checked: false,
-        id: "3",
+        id: "12",
         service: "Twitter followers",
         type: "Default",
         provider: "naizop.com",
@@ -183,7 +183,7 @@ export const ServiceInfo = [
     services: [
       {
         checked: false,
-        id: "1",
+        id: "13",
         service: "Facebook likes",
         type: "Default",
         provider: "naizop.com",
@@ -194,7 +194,7 @@ export const ServiceInfo = [
       },
       {
         checked: false,
-        id: "2",
+        id: "14",
         service: "Facebook views",
         type: "Default",
         provider: "naizop.com",
@@ -205,7 +205,7 @@ export const ServiceInfo = [
       },
       {
         checked: false,
-        id: "3",
+        id: "15",
         service: "Facebook followers",
         type: "Default",
         provider: "naizop.com",
@@ -221,7 +221,7 @@ export const ServiceInfo = [
     services: [
       {
         checked: false,
-        id: "1",
+        id: "16",
         service: "Twitter likes",
         type: "Default",
         provider: "naizop.com",
@@ -232,7 +232,7 @@ export const ServiceInfo = [
       },
       {
         checked: false,
-        id: "2",
+        id: "17",
         service: "Twitter views",
         type: "Default",
         provider: "naizop.com",
@@ -243,7 +243,7 @@ export const ServiceInfo = [
       },
       {
         checked: false,
-        id: "3",
+        id: "18",
         service: "Twitter followers",
         type: "Default",
         provider: "naizop.com",

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import classNames from "classnames";
 
 import {
@@ -8,65 +9,71 @@ import {
 import { Button } from "../../Button";
 import { Checkbox } from "../../Checkbox";
 import { DropDown } from "../../DropDown";
-import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
-import { ServiceActions } from "../constants";
+import { UsersActions } from "../constants";
 
-import { useServiceTableSelector } from "../../../store/Tables/ServiceTable/useServiceTable";
+import { useUsersTableSelector } from "../../../store/Tables/UsersTable/useUsersTable";
 import { useTablesActions } from "../../../store/Tables/useTablesActions";
 
-const RowService = ({ item }) => {
+const RowOrders = ({ item }) => {
   const [checked, setChecked] = useState(item.checked);
-  const { activeAction } = useServiceTableSelector();
-  const { SetActiveAction } = useTablesActions();
+  const { activeAction } = useUsersTableSelector();
+  const { SetUserActiveAction } = useTablesActions();
 
   return (
-    <div
-      className={classNames("table-row-content", { suspended: item.status })}
-    >
+    <div className={classNames("table-row-content")}>
       <div className="table-row-cell-1">
-        <SvgIcon src={IconsVariants.DragAndDrop} size={12} />
         <Checkbox onChange={() => setChecked(!checked)} value={checked} />
       </div>
       <div className="table-row-cell-2">
         <Text variant={TextVariants.subtitle_medium}>{item.id}</Text>
       </div>
       <div className="table-row-cell-3">
-        <Text variant={TextVariants.subtitle_medium}>{item.service}</Text>
+        <Text variant={TextVariants.subtitle_medium}>{item.user}</Text>
       </div>
       <div className="table-row-cell-4">
-        <Text variant={TextVariants.subtitle_medium}>{item.type}</Text>
+        <Text variant={TextVariants.subtitle_medium}>{item.charge}</Text>
       </div>
       <div className="table-row-cell-5">
-        <Text variant={TextVariants.subtitle_medium}>{item.rate}</Text>
+        <Text variant={TextVariants.subtitle_medium}>{item.link}</Text>
       </div>
       <div className="table-row-cell-6">
-        <Text variant={TextVariants.subtitle_medium}>{item.min}</Text>
+        <Text variant={TextVariants.subtitle_medium}>{item.startCount}</Text>
       </div>
       <div className="table-row-cell-7">
-        <Text variant={TextVariants.subtitle_medium}>{item.max}</Text>
+        <Text variant={TextVariants.subtitle_medium}>{item.quantity}</Text>
       </div>
       <div className="table-row-cell-8">
-        <Text variant={TextVariants.subtitle_medium}>
-          {item.status ? "Disabled" : "Enabled"}
-        </Text>
+        <Text variant={TextVariants.subtitle_medium}>{item.service}</Text>
       </div>
       <div className="table-row-cell-9">
+        <Text variant={TextVariants.subtitle_medium}>{item.status}</Text>
+      </div>
+      <div className="table-row-cell-10">
+        <Text variant={TextVariants.subtitle_medium}>{item.remains}</Text>
+      </div>
+      <div className="table-row-cell-11">
+        <Text variant={TextVariants.subtitle_medium}>{item.created}</Text>
+      </div>{" "}
+      <div className="table-row-cell-12">
+        <Text variant={TextVariants.subtitle_medium}>{item.mode}</Text>
+      </div>
+      <div className="table-row-cell-13">
         <Button
           className={classNames("actions", {
-            active: item.id === activeAction,
+            active: activeAction === item.id,
           })}
-          onClick={() => SetActiveAction(item.id)}
+          onClick={() => SetUserActiveAction(item.id)}
           text="Actions"
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
-          <DropDown isOpen={item.id === activeAction}>
-            {ServiceActions.map((text, index) => (
+          <DropDown isOpen={activeAction === item.id}>
+            {UsersActions.map((text, index) => (
               <div
                 key={index}
                 onClick={(e) => {
-                  SetActiveAction("");
+                  SetUserActiveAction("");
                   e.stopPropagation();
                 }}
                 className="action-item cursor-pointer"
@@ -81,4 +88,4 @@ const RowService = ({ item }) => {
   );
 };
 
-export default RowService;
+export default RowOrders;

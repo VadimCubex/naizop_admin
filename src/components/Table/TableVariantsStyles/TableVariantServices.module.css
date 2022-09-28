@@ -27,10 +27,14 @@
   border-bottom: unset;
 }
 
+.table.table-variant-services .table-header .table-column-cell-1 {
+  justify-content: center;
+}
+
 .table.table-variant-services .table-header .table-column-cell-1,
 .table.table-variant-services .table-row-content .table-row-cell-1 {
   width: 3.2%;
-  justify-content: center;
+  gap: 5px;
 }
 
 .table.table-variant-services .table-header .table-column-cell-2,
@@ -38,9 +42,12 @@
   width: 3.9%;
 }
 
-.table.table-variant-services .table-header .table-column-cell-3,
+.table.table-variant-services .table-header .table-column-cell-3 {
+  width: calc(42.2% - 6px);
+}
+
 .table.table-variant-services .table-row-content .table-row-cell-3 {
-  width: 29.8%;
+  width: 42.2%;
 }
 
 .table.table-variant-services .table-header .table-column-cell-4,
@@ -50,12 +57,12 @@
 
 .table.table-variant-services .table-header .table-column-cell-5,
 .table.table-variant-services .table-row-content .table-row-cell-5 {
-  width: 12.4%;
+  width: 6.9%;
 }
 
 .table.table-variant-services .table-header .table-column-cell-6,
 .table.table-variant-services .table-row-content .table-row-cell-6 {
-  width: 6.9%;
+  width: 7.9%;
 }
 
 .table.table-variant-services .table-header .table-column-cell-7,
@@ -65,16 +72,11 @@
 
 .table.table-variant-services .table-header .table-column-cell-8,
 .table.table-variant-services .table-row-content .table-row-cell-8 {
-  width: 7.9%;
+  width: 6.9%;
 }
 
 .table.table-variant-services .table-header .table-column-cell-9,
 .table.table-variant-services .table-row-content .table-row-cell-9 {
-  width: 6.9%;
-}
-
-.table.table-variant-services .table-header .table-column-cell-10,
-.table.table-variant-services .table-row-content .table-row-cell-10 {
   width: 6.8%;
 }
 
@@ -124,7 +126,7 @@
 
 .table.table-variant-services
   .table-row-content
-  .table-row-cell-10
+  .table-row-cell-9
   .button
   > .dropDown {
   z-index: 2;
@@ -136,4 +138,12 @@
   .accordion-container
   .accordion {
   border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.table.table-variant-services .table-header .table-column-cell-8 .button {
+  margin-left: -8px;
+}
+
+.table.table-variant-services .table-header .table-column-cell-4 .button {
+  margin-left: -4px;
 }

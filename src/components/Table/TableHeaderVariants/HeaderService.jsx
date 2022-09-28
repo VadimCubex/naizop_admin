@@ -9,22 +9,15 @@ import { Button } from "../../Button";
 import { Checkbox } from "../../Checkbox";
 import { DropDown } from "../../DropDown";
 import { Text } from "../../Text";
-import {
-  ServiceStatuses,
-  ServiceProviders,
-  ServiceTypes,
-  UsersStatuses,
-} from "../constants";
+import { ServiceStatuses, ServiceTypes, UsersStatuses } from "../constants";
 
 const HeaderService = ({ column }) => {
   const [checked, setChecked] = useState(column.checked);
   const [isOpenStatus, setIsOpenStatus] = useState(false);
   const [isOpenType, setIsOpenType] = useState(false);
-  const [isOpenProvider, setIsOpenProvider] = useState(false);
 
   const [selectedStatus, setSelectedStatus] = useState(UsersStatuses[0]);
   const [selectedType, setSelectedType] = useState(UsersStatuses[0]);
-  const [selectedProvider, setSelectedProvider] = useState([]);
 
   const handleClickStatus = (text) => {
     setIsOpenStatus(false);
@@ -34,23 +27,6 @@ const HeaderService = ({ column }) => {
   const handleClickType = (text) => {
     setIsOpenType(false);
     setSelectedType(text);
-  };
-
-  const handleClickProvider = (text) => {
-    if (selectedProvider.includes(text)) {
-      setSelectedProvider(selectedProvider.filter((item) => item !== text));
-    } else {
-      setIsOpenProvider(false);
-      setSelectedProvider([...selectedProvider, text]);
-    }
-  };
-
-  const ProviderTitle = () => {
-    if (selectedProvider.length > 0) {
-      return column.provider + `(${selectedProvider?.length})`;
-    } else {
-      return column.provider;
-    }
   };
 
   return (
@@ -88,36 +64,15 @@ const HeaderService = ({ column }) => {
         </Button>
       </div>
       <div className="table-column-cell-5">
-        <Button
-          className={classNames({ active: isOpenProvider })}
-          onClick={() => setIsOpenProvider(!isOpenProvider)}
-          text={ProviderTitle()}
-          iconPosition="right"
-          icon={IconsVariants.DropDown_arrow_fill}
-        >
-          <DropDown isOpen={isOpenProvider}>
-            {ServiceProviders.map((text, index) => (
-              <div
-                key={index}
-                onClick={() => handleClickProvider(text)}
-                className="action-item cursor-pointer"
-              >
-                <Text variant={TextVariants.subtitle_medium}>{text}</Text>
-              </div>
-            ))}
-          </DropDown>
-        </Button>
-      </div>
-      <div className="table-column-cell-6">
         <Text variant={TextVariants.subtitle_bold}>{column.rate}</Text>
       </div>
-      <div className="table-column-cell-7">
+      <div className="table-column-cell-6">
         <Text variant={TextVariants.subtitle_bold}>{column.min}</Text>
       </div>
-      <div className="table-column-cell-8">
+      <div className="table-column-cell-7">
         <Text variant={TextVariants.subtitle_bold}>{column.max}</Text>
       </div>
-      <div className="table-column-cell-9">
+      <div className="table-column-cell-8">
         <Button
           className={classNames({ active: isOpenStatus })}
           onClick={() => setIsOpenStatus(!isOpenStatus)}
@@ -138,7 +93,7 @@ const HeaderService = ({ column }) => {
           </DropDown>
         </Button>
       </div>
-      <div className="table-column-cell-10"></div>
+      <div className="table-column-cell-9"></div>
     </>
   );
 };

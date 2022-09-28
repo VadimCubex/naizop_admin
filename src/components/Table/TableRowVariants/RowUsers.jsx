@@ -13,9 +13,13 @@ import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
 import { UsersActions } from "../constants";
 
+import { useUsersTableSelector } from "../../../store/Tables/UsersTable/useUsersTable";
+import { useTablesActions } from "../../../store/Tables/useTablesActions";
+
 const RowUsers = ({ item }) => {
   const [checked, setChecked] = useState(item.checked);
-  const [isOpenActions, setIsOpenActions] = useState(false);
+  const { activeAction } = useUsersTableSelector();
+  const { SetUserActiveAction } = useTablesActions();
 
   return (
     <div
@@ -67,18 +71,21 @@ const RowUsers = ({ item }) => {
       </div>
       <div className="table-row-cell-12">
         <Button
-          className={classNames("actions", { active: isOpenActions })}
-          onClick={() => setIsOpenActions(!isOpenActions)}
+          className={classNames("actions", {
+            active: activeAction === item.id,
+          })}
+          onClick={() => SetUserActiveAction(item.id)}
           text="Actions"
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
-          <DropDown isOpen={isOpenActions}>
+          <DropDown isOpen={activeAction === item.id}>
             {UsersActions.map((text, index) => (
               <div
                 key={index}
-                onClick={() => {
-                  setIsOpenActions(false);
+                onClick={(e) => {
+                  SetUserActiveAction("");
+                  e.stopPropagation();
                 }}
                 className="action-item cursor-pointer"
               >

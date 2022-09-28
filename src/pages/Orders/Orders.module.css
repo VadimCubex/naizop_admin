@@ -1,0 +1,43 @@
+.orders {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  height: 100%;
+}
+
+.orders .orders-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orders .orders-tools .sort {
+  display: flex;
+  gap: 5px;
+}
+
+.orders .orders-tools .sort .sort-item {
+  padding: 8px 12px;
+  color: rgb(39, 73, 138);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.orders .orders-tools .sort .sort-item:hover {
+  background: #f4f4f4;
+}
+
+.orders .orders-tools .sort .sort-item.active {
+  background: #e7e7e7;
+  color: #000;
+}
+
+.orders .orders-tools .export {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.orders .orders-tools .export > .text {
+  color: rgb(39, 73, 138);
+}

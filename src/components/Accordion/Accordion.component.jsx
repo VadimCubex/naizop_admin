@@ -13,7 +13,7 @@ import { SvgIcon } from "../SvgIcon";
 import { Text } from "../Text";
 
 export const AccordionComponent = ({ category, children, className }) => {
-  const [isShowDropDown, setIsShowDropDown] = useState(false);
+  const [isShowDropDown, setIsShowDropDown] = useState(true);
   const [isOpenActions, setIsOpenActions] = useState(false);
 
   const AccordionClass = classNames(
@@ -57,15 +57,19 @@ export const AccordionComponent = ({ category, children, className }) => {
           </Button>
         </div>
         {category.services && (
-          <div className="cursor-pointer show">
-            <Text
-              onClick={() => setIsShowDropDown(!isShowDropDown)}
-              variant={TextVariants.subtitle_medium}
-            >
+          <div
+            onClick={() => setIsShowDropDown(!isShowDropDown)}
+            className="cursor-pointer show"
+          >
+            <Text variant={TextVariants.subtitle_medium}>
               {isShowDropDown ? "Hide" : "Show"} services (
               {category.services.length})
             </Text>
-            <SvgIcon src={IconsVariants.DropDown_arrow_fill} size={8} />
+            <SvgIcon
+              src={IconsVariants.DropDown_arrow_fill}
+              size={8}
+              rotate={isShowDropDown ? "180" : "0"}
+            />
           </div>
         )}
       </div>

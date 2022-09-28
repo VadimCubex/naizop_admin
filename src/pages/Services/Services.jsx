@@ -67,7 +67,57 @@ const Services = () => {
           isOpen={isOpenAddCategory}
           onClick={() => setIsOpenAddCategory(false)}
           title="Create category"
-        ></Modal>
+          footer={
+            <>
+              <Button className="blue" text="Save changes" />
+              <Button text="Close" />
+            </>
+          }
+        >
+          <div className="category">
+            <Button
+              text="Add icon"
+              iconUnicode={<i className="fas fa-smile" />}
+            />
+            <div className="service-add">
+              <div>
+                <div className="name">
+                  <Text variant={TextVariants.subtitle_bold}>
+                    Category name
+                  </Text>
+                  <Text
+                    className="language "
+                    variant={TextVariants.subtitle_bold}
+                  >
+                    English
+                  </Text>
+                </div>
+                <Text
+                  className="cursor-pointer"
+                  variant={TextVariants.subtitle_bold}
+                >
+                  Show translations(1)
+                </Text>
+              </div>
+              <Input />
+            </div>
+          </div>
+          <div className="service-add">
+            <Text variant={TextVariants.subtitle_bold}>
+              Position <i className="fas fa-exclamation-circle" />
+            </Text>
+            <Input
+              placeholder="Choose category"
+              rightSide={
+                <SvgIcon
+                  src={IconsVariants.DropDown_arrow_stroke}
+                  size={20}
+                  color={"#000"}
+                />
+              }
+            />
+          </div>
+        </Modal>
         <Modal
           isOpen={isOpenAddService}
           onClick={() => setIsOpenAddService(false)}
