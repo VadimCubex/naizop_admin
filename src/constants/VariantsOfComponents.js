@@ -157,7 +157,7 @@ export const TableVariants = {
   Users: "users",
   Services: "services",
   Orders: "orders",
-  Tickets: "pickets",
+  Tickets: "tickets",
   Payments: "payments",
 };
 

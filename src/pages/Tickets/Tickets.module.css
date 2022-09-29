@@ -1,0 +1,18 @@
+.tickets {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tickets .tickets-tools {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tickets .tickets-tools .export {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.tickets .tickets-tools .export > .text {
+  color: rgb(39, 73, 138);
+}

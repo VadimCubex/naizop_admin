@@ -24,9 +24,10 @@
 
 @import "../pages/Users/Users.module.css";
 @import "../pages/Orders/Orders.module.css";
-@import "../pages/Blog/Blog.module.css";
-@import "../pages/Tools/Tools.module.css";
+@import "../pages/Payment/Payment.module.css";
+@import "../pages/Tickets/Tickets.module.css";
 @import "../pages/Services/Services.module.css";
+@import "../pages/Settings/Settings.module.css";
 
 :root {
   --transition-property: all;

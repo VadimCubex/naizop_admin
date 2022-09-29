@@ -1,0 +1,99 @@
+.table.table-variant-orders {
+  margin-top: 10px;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-1,
+.table.table-variant-orders .table-row-content .table-row-cell-1 {
+  width: 2.4%;
+  justify-content: center;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-2,
+.table.table-variant-orders .table-row-content .table-row-cell-2 {
+  width: 4.4%;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-3,
+.table.table-variant-orders .table-row-content .table-row-cell-3 {
+  width: 6.5%;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-4,
+.table.table-variant-orders .table-row-content .table-row-cell-4 {
+  width: 4.5%;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-5 {
+  width: calc(35.3% - 6px);
+}
+.table.table-variant-orders .table-row-content .table-row-cell-5 {
+  width: 35.3%;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-6,
+.table.table-variant-orders .table-row-content .table-row-cell-6 {
+  width: 6.3%;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-7,
+.table.table-variant-orders .table-row-content .table-row-cell-7 {
+  width: 5.2%;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-8,
+.table.table-variant-orders .table-row-content .table-row-cell-8 {
+  width: 12.6%;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-9,
+.table.table-variant-orders .table-row-content .table-row-cell-9 {
+  width: 5.7%;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-10,
+.table.table-variant-orders .table-row-content .table-row-cell-10 {
+  width: 5%;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-11,
+.table.table-variant-orders .table-row-content .table-row-cell-11 {
+  width: 6%;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-12,
+.table.table-variant-orders .table-row-content .table-row-cell-12 {
+  width: 6%;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-13,
+.table.table-variant-orders .table-row-content .table-row-cell-13 {
+  width: 6.1%;
+}
+
+.table.table-variant-orders
+  .table-header
+  [class*="table-column-cell"]
+  .svgIcon
+  path {
+  fill: #000;
+}
+
+.table.table-variant-orders
+  .table-header
+  .table-column-cell-1
+  .checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 4px;
+}
+
+.table.table-variant-orders .table-header .table-column-cell-3 .button,
+.table.table-variant-orders .table-header .table-column-cell-8 .button,
+.table.table-variant-orders .table-header .table-column-cell-12 .button {
+  margin-left: -8px;
+}

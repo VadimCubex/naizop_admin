@@ -1,0 +1,20 @@
+.users {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  height: 100%;
+}
+
+.users .users-tools {
+  display: flex;
+  justify-content: space-between;
+}
+
+.users .users-tools .export {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.users .users-tools .export > .text {
+  color: rgb(39, 73, 138);
+}

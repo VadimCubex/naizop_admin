@@ -1,11 +1,12 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 
-import MainLayout from "../layouts/MainLayout";
-import Blog from "../pages/Blog/Blog";
+import MainLayout from "../layout/MainLayout";
 import Orders from "../pages/Orders/Orders";
+import Payment from "../pages/Payment/Payment";
 import Services from "../pages/Services/Services";
-import Tools from "../pages/Tools/Tools";
+import Settings from "../pages/Settings/Settings";
+import Tickets from "../pages/Tickets/Tickets";
 import Users from "../pages/Users/Users";
 
 const NaizopRoutes = () => {
@@ -15,9 +16,9 @@ const NaizopRoutes = () => {
         <Route path="users" element={<Users />} />
         <Route path="orders" element={<Orders />} />
         <Route path="services" element={<Services />} />
-        <Route path="payments" element={<Blog className="background-img" />} />
-        <Route path="tickets" element={<Tools className="background-img" />} />
-        <Route path="settings" element={<Orders />} />
+        <Route path="payments" element={<Payment />} />
+        <Route path="tickets" element={<Tickets />} />
+        <Route path="settings" element={<Settings />} />
         <Route path="/" element={<Navigate to="/users" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>

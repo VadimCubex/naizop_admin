@@ -102,28 +102,6 @@
   border-radius: 4px;
 }
 
-.table.table-variant-services .table-row-content .table-row-cell-4 {
-  justify-content: space-between;
-}
-
-.table.table-variant-services .table-row-content .table-row-cell-4 .icons {
-  display: flex;
-  gap: 5px;
-  margin-right: 4px;
-}
-
-.table.table-variant-services .table-row-content .table-row-cell-4 .status {
-  padding: 1px;
-  border: 1px solid #000;
-  border-radius: 2px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 14px;
-  height: 14px;
-  margin-left: 5px;
-}
-
 .table.table-variant-services
   .table-row-content
   .table-row-cell-9

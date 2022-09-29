@@ -1,7 +1,9 @@
 import React from "react";
 
 import HeaderOrders from "./HeaderOrders";
+import HeaderPayments from "./HeaderPayments";
 import HeaderService from "./HeaderService";
+import HeaderTickets from "./HeaderTickets";
 import HeaderUsers from "./HeaderUsers";
 import { TableVariants } from "../../../constants/VariantsOfComponents";
 
@@ -10,6 +12,8 @@ const TableHeader = ({ variant, columns }) => {
     [TableVariants.Users]: <HeaderUsers column={columns} />,
     [TableVariants.Services]: <HeaderService column={columns} />,
     [TableVariants.Orders]: <HeaderOrders column={columns} />,
+    [TableVariants.Payments]: <HeaderPayments column={columns} />,
+    [TableVariants.Tickets]: <HeaderTickets column={columns} />,
   };
 
   return <>{HeaderVariantMap[variant]}</>;

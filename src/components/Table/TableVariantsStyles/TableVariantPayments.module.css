@@ -1,0 +1,98 @@
+.table.table-variant-payments {
+  margin-top: 10px;
+}
+
+.table.table-variant-payments .table-row [class*="table-row-cell"] {
+  height: 42px;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-1,
+.table.table-variant-payments .table-row-content .table-row-cell-1 {
+  width: 3.3%;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-2,
+.table.table-variant-payments .table-row-content .table-row-cell-2 {
+  width: 9.5%;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-3,
+.table.table-variant-payments .table-row-content .table-row-cell-3 {
+  width: 7.5%;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-4,
+.table.table-variant-payments .table-row-content .table-row-cell-4 {
+  overflow: hidden;
+  width: 5.7%;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-5,
+.table.table-variant-payments .table-row-content .table-row-cell-5 {
+  width: 7.5%;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-6,
+.table.table-variant-payments .table-row-content .table-row-cell-6 {
+  width: 7%;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-7,
+.table.table-variant-payments .table-row-content .table-row-cell-7 {
+  width: 10%;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-8,
+.table.table-variant-payments .table-row-content .table-row-cell-8 {
+  width: 20%;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-9,
+.table.table-variant-payments .table-row-content .table-row-cell-9 {
+  width: 10%;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-10,
+.table.table-variant-payments .table-row-content .table-row-cell-10 {
+  width: 9.5%;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-11,
+.table.table-variant-payments .table-row-content .table-row-cell-11 {
+  width: 6.7%;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-12,
+.table.table-variant-payments .table-row-content .table-row-cell-12 {
+  position: relative;
+  width: 3.3%;
+}
+
+.table.table-variant-payments
+  .table-header
+  [class*="table-column-cell"]
+  .svgIcon
+  path {
+  fill: #000;
+}
+
+.table.table-variant-payments
+  .table-header
+  .table-column-cell-1
+  .checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 4px;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-5 .button,
+.table.table-variant-payments .table-header .table-column-cell-6 .button,
+.table.table-variant-payments .table-header .table-column-cell-7 .button,
+.table.table-variant-payments .table-header .table-column-cell-11 .button {
+  margin-left: -8px;
+}

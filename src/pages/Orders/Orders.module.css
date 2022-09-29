@@ -17,7 +17,11 @@
 }
 
 .orders .orders-tools .sort .sort-item {
-  padding: 8px 12px;
+  height: 32px;
+  padding: 0px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: rgb(39, 73, 138);
   cursor: pointer;
   border-radius: 4px;

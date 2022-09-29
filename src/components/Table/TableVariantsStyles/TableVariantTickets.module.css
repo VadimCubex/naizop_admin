@@ -1,0 +1,64 @@
+.table.table-variant-tickets {
+  margin-top: 10px;
+}
+
+.table.table-variant-tickets .table-row [class*="table-row-cell"] {
+  height: 42px;
+}
+
+.table.table-variant-tickets .table-header .table-column-cell-1,
+.table.table-variant-tickets .table-row-content .table-row-cell-1 {
+  width: 2.5%;
+  justify-content: center;
+}
+
+.table.table-variant-tickets .table-header .table-column-cell-2,
+.table.table-variant-tickets .table-row-content .table-row-cell-2 {
+  width: 3.9%;
+}
+
+.table.table-variant-tickets .table-header .table-column-cell-3,
+.table.table-variant-tickets .table-row-content .table-row-cell-3 {
+  width: 15.5%;
+}
+
+.table.table-variant-tickets .table-header .table-column-cell-4,
+.table.table-variant-tickets .table-row-content .table-row-cell-4 {
+  overflow: hidden;
+  width: 48%;
+}
+
+.table.table-variant-tickets .table-header .table-column-cell-5,
+.table.table-variant-tickets .table-row-content .table-row-cell-5,
+.table.table-variant-tickets .table-header .table-column-cell-6,
+.table.table-variant-tickets .table-row-content .table-row-cell-6,
+.table.table-variant-tickets .table-header .table-column-cell-7,
+.table.table-variant-tickets .table-row-content .table-row-cell-7 {
+  width: 10.18%;
+}
+
+.table.table-variant-tickets
+  .table-header
+  [class*="table-column-cell"]
+  .svgIcon
+  path {
+  fill: #000;
+}
+
+.table.table-variant-tickets
+  .table-header
+  .table-column-cell-1
+  .checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 4px;
+}
+
+.table.table-variant-tickets .table-header .table-column-cell-5 .button {
+  margin-left: -8px;
+}

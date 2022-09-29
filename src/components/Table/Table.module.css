@@ -1,5 +1,8 @@
 @import "./TableVariantsStyles/TableVariantUsers.module.css";
 @import "./TableVariantsStyles/TableVariantServices.module.css";
+@import "./TableVariantsStyles/TableVariantOrders.module.css";
+@import "./TableVariantsStyles/TableVariantPayments.module.css";
+@import "./TableVariantsStyles/TableVariantTickets.module.css";
 
 .table {
   min-width: 1325px;
