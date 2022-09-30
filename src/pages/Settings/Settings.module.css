@@ -1,20 +1,15 @@
-.users {
+.settings {
   padding-top: 10px;
   padding-bottom: 10px;
   position: relative;
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.users .users-tools {
-  display: flex;
-  justify-content: space-between;
-}
-
-.users .users-tools .export {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.users .users-tools .export > .text {
-  color: rgb(39, 73, 138);
+.settings .settings-container {
+  max-width: 600px;
+  width: 600px;
+  border-radius: 4px;
+  border: 1px solid #dcdcdc;
 }
