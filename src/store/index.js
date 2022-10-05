@@ -1,12 +1,8 @@
-import ServiceTableSlice from "./Tables/ServiceTable/ServiceTableSlice";
-import UsersTableSlice from "./Tables/UsersTable/UsersTableSlice";
+import TableSlice from "./Tables/TableSlice";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 const rootReducer = combineReducers({
-  tables: combineReducers({
-    service: ServiceTableSlice,
-    users: UsersTableSlice,
-  }),
+  tables: TableSlice,
 });
 
 export const store = configureStore({

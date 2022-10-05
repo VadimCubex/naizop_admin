@@ -1,17 +1,15 @@
 import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import { SetUserActiveAction } from "./UsersTable/UsersTableSlice";
-
-import { SetActiveAction } from "./ServiceTable/ServiceTableSlice";
+import { setActiveAction, setActiveColumn } from "./TableSlice";
 
 export const useTablesActions = () => {
   const dispatch = useDispatch();
 
   return bindActionCreators(
     {
-      SetActiveAction,
-      SetUserActiveAction,
+      setActiveAction,
+      setActiveColumn,
     },
     dispatch
   );

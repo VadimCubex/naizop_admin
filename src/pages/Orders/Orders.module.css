@@ -9,6 +9,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .orders .orders-tools .sort {
@@ -36,12 +38,96 @@
   color: #000;
 }
 
+.orders .orders-tools .export > div:first-child,
 .orders .orders-tools .export {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.orders .orders-tools .export > .text {
+.orders .orders-tools .export > div:first-child > .text {
   color: rgb(39, 73, 138);
+}
+
+.orders .orders-tools .date .dropDown-dates {
+  top: 120%;
+  right: -1px;
+  left: unset;
+  padding: 4px 0px;
+  z-index: 3;
+}
+
+.orders .orders-tools .date .dropDown-picker {
+  top: 120%;
+  padding: 4px 0px;
+  z-index: 3;
+  width: fit-content;
+  left: -580px;
+  padding: 0px;
+}
+
+.orders .orders-tools .button.date > div > .svgIcon {
+  width: 7px !important;
+  height: 7px !important;
+  stroke: unset !important;
+}
+
+.orders .orders-tools .button.date > div > .svgIcon div path {
+  fill: #000;
+}
+
+.orders .orders-tools .date .gray {
+  color: #999999;
+}
+
+.orders .orders-tools .date .date-item {
+  padding: 5px 15px;
+  text-align: left;
+}
+
+.orders .orders-tools .date .date-item:not(.gray):hover {
+  background: #e7e7e7;
+}
+
+.orders .orders-tools .date .dropDown-picker .separator {
+  width: 100%;
+  height: 1px;
+  background: rgb(201, 201, 201);
+}
+
+.orders .orders-tools .date .dropDown-picker .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px;
+}
+
+.orders .orders-tools .date .dropDown-picker .buttons .button .text {
+  font-weight: 700;
+}
+
+@media (max-width: 1270px) {
+  .orders .orders-tools .sort {
+    flex-wrap: wrap;
+  }
+  .orders .orders-tools .date .dropDown-dates {
+    right: unset;
+    left: -1px;
+  }
+  .orders .orders-tools .date .dropDown-picker {
+    left: -1px;
+    top: 165px;
+  }
+}
+
+@media (max-width: 600px) {
+  .orders .orders-tools .export {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .orders .orders-tools .export > div:first-child {
+    flex-direction: row-reverse;
+  }
 }

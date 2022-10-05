@@ -8,32 +8,47 @@ import {
 import { Button } from "../../Button";
 import { DropDown } from "../../DropDown";
 import { Text } from "../../Text";
-import { UsersStatuses } from "../constants";
+import {
+  PaymentFraudRisk,
+  PaymentMethod,
+  PaymentMode,
+  PaymentStatus,
+  UsersStatuses,
+} from "../constants";
+
+import { useTableSelector } from "../../../store/Tables/useTable";
+import { useTablesActions } from "../../../store/Tables/useTablesActions";
 
 const HeaderPayments = ({ column }) => {
-  const [isOpenMethod, setIsOpenMethod] = useState(false);
-  const [isOpenStatus, setIsOpenStatus] = useState(false);
-  const [isOpenRisk, setIsOpenRisk] = useState(false);
-  const [isOpenMode, setIsOpenMode] = useState(false);
+  const { activeColumn } = useTableSelector();
+  const { setActiveColumn } = useTablesActions();
   const [selectedMethod, setSelectedMethod] = useState(UsersStatuses[0]);
   const [selectedStatus, setSelectedStatus] = useState(UsersStatuses[0]);
   const [selectedRisk, setSelectedRisk] = useState(UsersStatuses[0]);
   const [selectedMode, setSelectedMode] = useState(UsersStatuses[0]);
 
-  const handleClickMethod = (text) => {
+  const handleClickMethod = (e, text) => {
+    setActiveColumn("");
     setSelectedMethod(text);
+    e.stopPropagation();
   };
 
-  const handleClickStatus = (text) => {
+  const handleClickStatus = (e, text) => {
+    setActiveColumn("");
     setSelectedStatus(text);
+    e.stopPropagation();
   };
 
-  const handleClickRisk = (text) => {
+  const handleClickRisk = (e, text) => {
+    setActiveColumn("");
     setSelectedRisk(text);
+    e.stopPropagation();
   };
 
-  const handleClickMode = (text) => {
+  const handleClickMode = (e, text) => {
+    setActiveColumn("");
     setSelectedMode(text);
+    e.stopPropagation();
   };
 
   return (
@@ -52,17 +67,17 @@ const HeaderPayments = ({ column }) => {
       </div>
       <div className="table-column-cell-5">
         <Button
-          className={classNames({ active: isOpenMethod })}
-          onClick={() => setIsOpenMethod(!isOpenMethod)}
+          className={classNames({ active: activeColumn === "Method" })}
+          onClick={() => setActiveColumn("Method")}
           text={selectedMethod === "All" ? column.method : selectedMethod}
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
-          <DropDown isOpen={isOpenMethod}>
-            {UsersStatuses.map((text, index) => (
+          <DropDown isOpen={activeColumn === "Method"}>
+            {PaymentMethod.map((text, index) => (
               <div
                 key={index}
-                onClick={() => handleClickMethod(text)}
+                onClick={(e) => handleClickMethod(e, text)}
                 className="action-item cursor-pointer"
               >
                 <Text variant={TextVariants.subtitle_medium}>{text}</Text>
@@ -73,17 +88,17 @@ const HeaderPayments = ({ column }) => {
       </div>
       <div className="table-column-cell-6">
         <Button
-          className={classNames({ active: isOpenStatus })}
-          onClick={() => setIsOpenStatus(!isOpenStatus)}
+          className={classNames({ active: activeColumn === "Status" })}
+          onClick={() => setActiveColumn("Status")}
           text={selectedStatus === "All" ? column.status : selectedStatus}
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
-          <DropDown isOpen={isOpenStatus}>
-            {UsersStatuses.map((text, index) => (
+          <DropDown isOpen={activeColumn === "Status"}>
+            {PaymentStatus.map((text, index) => (
               <div
                 key={index}
-                onClick={() => handleClickStatus(text)}
+                onClick={(e) => handleClickStatus(e, text)}
                 className="action-item cursor-pointer"
               >
                 <Text variant={TextVariants.subtitle_medium}>{text}</Text>
@@ -94,17 +109,17 @@ const HeaderPayments = ({ column }) => {
       </div>
       <div className="table-column-cell-7">
         <Button
-          className={classNames({ active: isOpenRisk })}
-          onClick={() => setIsOpenRisk(!isOpenRisk)}
+          className={classNames({ active: activeColumn === "FraudRisk" })}
+          onClick={() => setActiveColumn("FraudRisk")}
           text={selectedRisk === "All" ? column.fraudRisk : selectedRisk}
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
-          <DropDown isOpen={isOpenRisk}>
-            {UsersStatuses.map((text, index) => (
+          <DropDown isOpen={activeColumn === "FraudRisk"}>
+            {PaymentFraudRisk.map((text, index) => (
               <div
                 key={index}
-                onClick={() => handleClickRisk(text)}
+                onClick={(e) => handleClickRisk(e, text)}
                 className="action-item cursor-pointer"
               >
                 <Text variant={TextVariants.subtitle_medium}>{text}</Text>
@@ -124,17 +139,17 @@ const HeaderPayments = ({ column }) => {
       </div>
       <div className="table-column-cell-11">
         <Button
-          className={classNames({ active: isOpenMode })}
-          onClick={() => setIsOpenMode(!isOpenMode)}
+          className={classNames({ active: activeColumn === "Mode" })}
+          onClick={() => setActiveColumn("Mode")}
           text={selectedMode === "All" ? column.mode : selectedMode}
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
-          <DropDown isOpen={isOpenMode}>
-            {UsersStatuses.map((text, index) => (
+          <DropDown isOpen={activeColumn === "Mode"}>
+            {PaymentMode.map((text, index) => (
               <div
                 key={index}
-                onClick={() => handleClickMode(text)}
+                onClick={(e) => handleClickMode(e, text)}
                 className="action-item cursor-pointer"
               >
                 <Text variant={TextVariants.subtitle_medium}>{text}</Text>

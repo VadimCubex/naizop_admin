@@ -14,12 +14,14 @@ export const SvgIconComponent = ({
   onClick,
   onMouseMove,
   defaultStroke,
+  disabled,
 }) => {
   const svgIconClass = classNames(
     "svgIcon",
     {
       [`svgIcon_rotate_${rotate}`]: rotate,
       ["defaultStroke"]: defaultStroke,
+      disabled: disabled,
     },
     className
   );

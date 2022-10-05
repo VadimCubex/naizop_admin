@@ -13,6 +13,10 @@
   color: #a0a0a0;
 }
 
+.filter .border-radius {
+  border-radius: 4px;
+}
+
 .filter .right-border-radius {
   border-radius: 0px 4px 4px 0px;
 }
@@ -28,4 +32,13 @@
 .filter .select-container .dropDown {
   min-width: unset;
   margin-left: -1px;
+}
+
+@media (max-width: 600px) {
+  .filter .input {
+    width: 120px;
+  }
+  .filter .select-container {
+    width: 110px;
+  }
 }

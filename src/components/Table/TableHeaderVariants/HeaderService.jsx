@@ -11,22 +11,29 @@ import { DropDown } from "../../DropDown";
 import { Text } from "../../Text";
 import { ServiceStatuses, ServiceTypes, UsersStatuses } from "../constants";
 
+import { useTableSelector } from "../../../store/Tables/useTable";
+import { useTablesActions } from "../../../store/Tables/useTablesActions";
+
 const HeaderService = ({ column }) => {
   const [checked, setChecked] = useState(column.checked);
-  const [isOpenStatus, setIsOpenStatus] = useState(false);
-  const [isOpenType, setIsOpenType] = useState(false);
+  const { activeColumn } = useTableSelector();
+  const { setActiveColumn, setActiveAction } = useTablesActions();
 
   const [selectedStatus, setSelectedStatus] = useState(UsersStatuses[0]);
   const [selectedType, setSelectedType] = useState(UsersStatuses[0]);
 
-  const handleClickStatus = (text) => {
-    setIsOpenStatus(false);
+  const handleClickStatus = (e, text) => {
+    setActiveColumn("");
+    setActiveAction("");
     setSelectedStatus(text);
+    e.stopPropagation();
   };
 
-  const handleClickType = (text) => {
-    setIsOpenType(false);
+  const handleClickType = (e, text) => {
+    setActiveColumn("");
+    setActiveAction("");
     setSelectedType(text);
+    e.stopPropagation();
   };
 
   return (
@@ -44,17 +51,17 @@ const HeaderService = ({ column }) => {
       </div>
       <div className="table-column-cell-4">
         <Button
-          className={classNames({ active: isOpenType })}
-          onClick={() => setIsOpenType(!isOpenType)}
+          className={classNames({ active: activeColumn === "Type" })}
+          onClick={() => setActiveColumn("Type")}
           text={selectedType === "All" ? column.type : selectedType}
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
-          <DropDown isOpen={isOpenType}>
+          <DropDown isOpen={activeColumn === "Type"}>
             {ServiceTypes.map((text, index) => (
               <div
                 key={index}
-                onClick={() => handleClickType(text)}
+                onClick={(e) => handleClickType(e, text)}
                 className="action-item cursor-pointer"
               >
                 <Text variant={TextVariants.subtitle_medium}>{text}</Text>
@@ -74,17 +81,17 @@ const HeaderService = ({ column }) => {
       </div>
       <div className="table-column-cell-8">
         <Button
-          className={classNames({ active: isOpenStatus })}
-          onClick={() => setIsOpenStatus(!isOpenStatus)}
+          className={classNames({ active: activeColumn === "Status" })}
+          onClick={() => setActiveColumn("Status")}
           text={selectedStatus === "All" ? column.status : selectedStatus}
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
-          <DropDown isOpen={isOpenStatus}>
+          <DropDown isOpen={activeColumn === "Status"}>
             {ServiceStatuses.map((text, index) => (
               <div
                 key={index}
-                onClick={() => handleClickStatus(text)}
+                onClick={(e) => handleClickStatus(e, text)}
                 className="action-item cursor-pointer"
               >
                 <Text variant={TextVariants.subtitle_medium}>{text}</Text>

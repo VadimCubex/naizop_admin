@@ -2,6 +2,7 @@ import React from "react";
 
 import RowOrders from "./RowOrders";
 import RowPayments from "./RowPayments";
+import RowProvider from "./RowProvider";
 import RowServiceCategory from "./RowServiceCategory";
 import RowTickets from "./RowTickets";
 import RowUsers from "./RowUsers";
@@ -14,6 +15,7 @@ const TableRow = ({ variant, item }) => {
     [TableVariants.Orders]: <RowOrders item={item} />,
     [TableVariants.Payments]: <RowPayments item={item} />,
     [TableVariants.Tickets]: <RowTickets item={item} />,
+    [TableVariants.Provider]: <RowProvider item={item} />,
   };
 
   return <>{RowVariantMap[variant]}</>;

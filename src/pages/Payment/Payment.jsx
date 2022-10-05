@@ -5,16 +5,14 @@ import { Button } from "../../components/Button";
 import { Filter } from "../../components/Filter";
 import { Table } from "../../components/Table";
 import { Text } from "../../components/Text";
-import { PaymentColumn, PaymentInfo } from "./constants";
+import { PaymentColumn, PaymentInfo, PaymentSearch } from "./constants";
 import {
   TableVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 
-import { SortedBy } from "../Services/constants";
-
-const Users = () => {
-  const [sort, setSort] = useState(SortedBy[0]);
+const Payment = () => {
+  const [search, setSearch] = useState(PaymentSearch[0]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -34,9 +32,9 @@ const Users = () => {
             </Text>
             <Filter
               isShowSelect={true}
-              options={SortedBy}
-              selectValue={sort}
-              setSelectValue={setSort}
+              options={PaymentSearch}
+              selectValue={search}
+              setSelectValue={setSearch}
               leftSide={<i className="fas fa-search"></i>}
               placeholder={"Search payments"}
             />
@@ -52,4 +50,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default Payment;

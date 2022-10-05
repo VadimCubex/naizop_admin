@@ -12,13 +12,13 @@ import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
 import { ServiceActions } from "../constants";
 
-import { useServiceTableSelector } from "../../../store/Tables/ServiceTable/useServiceTable";
+import { useTableSelector } from "../../../store/Tables/useTable";
 import { useTablesActions } from "../../../store/Tables/useTablesActions";
 
 const RowService = ({ item }) => {
   const [checked, setChecked] = useState(item.checked);
-  const { activeAction } = useServiceTableSelector();
-  const { SetActiveAction } = useTablesActions();
+  const { activeAction } = useTableSelector();
+  const { setActiveAction } = useTablesActions();
 
   return (
     <div
@@ -56,7 +56,7 @@ const RowService = ({ item }) => {
           className={classNames("actions", {
             active: item.id === activeAction,
           })}
-          onClick={() => SetActiveAction(item.id)}
+          onClick={() => setActiveAction(item.id)}
           text="Actions"
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
@@ -66,7 +66,7 @@ const RowService = ({ item }) => {
               <div
                 key={index}
                 onClick={(e) => {
-                  SetActiveAction("");
+                  setActiveAction("");
                   e.stopPropagation();
                 }}
                 className="action-item cursor-pointer"

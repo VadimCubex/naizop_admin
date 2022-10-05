@@ -1,7 +1,3 @@
-.table.table-variant-tickets {
-  margin-top: 10px;
-}
-
 .table.table-variant-tickets .table-row [class*="table-row-cell"] {
   height: 42px;
 }

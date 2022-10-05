@@ -18,3 +18,14 @@
 .payment .payment-tools .export > .text {
   color: rgb(39, 73, 138);
 }
+
+@media (max-width: 600px) {
+  .payment .payment-tools {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .payment .payment-tools .export {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}

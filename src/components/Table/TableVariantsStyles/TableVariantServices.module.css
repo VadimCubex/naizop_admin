@@ -1,8 +1,10 @@
-.table.table-variant-services {
-  margin-top: 10px;
+.table-container.table-services {
   height: calc(100% - 42px);
   max-height: calc(100% - 42px);
-  overflow-y: hidden;
+}
+
+.table.table-variant-services {
+  height: 100%;
 }
 
 .table.table-variant-services .table-content {
@@ -43,16 +45,16 @@
 }
 
 .table.table-variant-services .table-header .table-column-cell-3 {
-  width: calc(42.2% - 6px);
+  width: calc(41.2% - 6px);
 }
 
 .table.table-variant-services .table-row-content .table-row-cell-3 {
-  width: 42.2%;
+  width: 41.2%;
 }
 
 .table.table-variant-services .table-header .table-column-cell-4,
 .table.table-variant-services .table-row-content .table-row-cell-4 {
-  width: 14.3%;
+  width: 15.3%;
 }
 
 .table.table-variant-services .table-header .table-column-cell-5,
@@ -116,6 +118,10 @@
   .accordion-container
   .accordion {
   border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.table.table-variant-services .table-header .table-column-cell-4 .dropDown {
+  min-width: 240px;
 }
 
 .table.table-variant-services .table-header .table-column-cell-8 .button {

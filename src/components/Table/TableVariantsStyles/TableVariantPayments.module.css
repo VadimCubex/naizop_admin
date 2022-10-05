@@ -1,7 +1,3 @@
-.table.table-variant-payments {
-  margin-top: 10px;
-}
-
 .table.table-variant-payments .table-row [class*="table-row-cell"] {
   height: 42px;
 }
@@ -88,6 +84,18 @@
   background: #fff;
   border: 1px solid rgb(201, 201, 201);
   border-radius: 4px;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-1,
+.table.table-variant-payments .table-row .table-row-cell-1 {
+  padding: 8px 4px 8px 16px;
+}
+
+.table.table-variant-payments .table-header .table-column-cell-5 .dropDown {
+  min-width: 230px;
+}
+.table.table-variant-payments .table-header .table-column-cell-11 .dropDown {
+  min-width: 120px;
 }
 
 .table.table-variant-payments .table-header .table-column-cell-5 .button,

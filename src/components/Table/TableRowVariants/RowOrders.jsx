@@ -10,15 +10,15 @@ import { Button } from "../../Button";
 import { Checkbox } from "../../Checkbox";
 import { DropDown } from "../../DropDown";
 import { Text } from "../../Text";
-import { UsersActions } from "../constants";
+import { OrdersActions } from "../constants";
 
-import { useUsersTableSelector } from "../../../store/Tables/UsersTable/useUsersTable";
+import { useTableSelector } from "../../../store/Tables/useTable";
 import { useTablesActions } from "../../../store/Tables/useTablesActions";
 
 const RowOrders = ({ item }) => {
   const [checked, setChecked] = useState(item.checked);
-  const { activeAction } = useUsersTableSelector();
-  const { SetUserActiveAction } = useTablesActions();
+  const { activeAction } = useTableSelector();
+  const { setActiveAction } = useTablesActions();
 
   return (
     <div className={classNames("table-row-content")}>
@@ -63,17 +63,17 @@ const RowOrders = ({ item }) => {
           className={classNames("actions", {
             active: activeAction === item.id,
           })}
-          onClick={() => SetUserActiveAction(item.id)}
+          onClick={() => setActiveAction(item.id)}
           text="Actions"
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
           <DropDown isOpen={activeAction === item.id}>
-            {UsersActions.map((text, index) => (
+            {OrdersActions.map((text, index) => (
               <div
                 key={index}
                 onClick={(e) => {
-                  SetUserActiveAction("");
+                  setActiveAction("");
                   e.stopPropagation();
                 }}
                 className="action-item cursor-pointer"

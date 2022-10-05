@@ -1,0 +1,32 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login .login-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login > div {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.login > div .button {
+  margin-top: 40px;
+}
+
+.login > div .button .text {
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+}

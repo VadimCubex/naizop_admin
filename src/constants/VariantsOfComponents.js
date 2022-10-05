@@ -159,6 +159,7 @@ export const TableVariants = {
   Orders: "orders",
   Tickets: "tickets",
   Payments: "payments",
+  Provider: "provider",
 };
 
 export const TabsVariants = {

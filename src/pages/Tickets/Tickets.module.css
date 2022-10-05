@@ -16,3 +16,14 @@
 .tickets .tickets-tools .export > .text {
   color: rgb(39, 73, 138);
 }
+
+@media (max-width: 600px) {
+  .tickets .tickets-tools {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .tickets .tickets-tools .export {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}

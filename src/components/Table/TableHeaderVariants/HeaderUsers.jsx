@@ -12,14 +12,19 @@ import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
 import { UsersStatuses } from "../constants";
 
+import { useTableSelector } from "../../../store/Tables/useTable";
+import { useTablesActions } from "../../../store/Tables/useTablesActions";
+
 const HeaderUsers = ({ column }) => {
   const [checked, setChecked] = useState(column.checked);
-  const [isOpenActions, setIsOpenActions] = useState(false);
   const [selectedStatus, setSelectedStatus] = useState(UsersStatuses[0]);
+  const { activeColumn } = useTableSelector();
+  const { setActiveColumn } = useTablesActions();
 
-  const handleClickStatus = (text) => {
-    setIsOpenActions(false);
+  const handleClickStatus = (e, text) => {
+    setActiveColumn("");
     setSelectedStatus(text);
+    e.stopPropagation();
   };
 
   return (
@@ -65,17 +70,17 @@ const HeaderUsers = ({ column }) => {
       </div>
       <div className="table-column-cell-7">
         <Button
-          className={classNames({ active: isOpenActions })}
-          onClick={() => setIsOpenActions(!isOpenActions)}
+          className={classNames({ active: activeColumn === "Status" })}
+          onClick={() => setActiveColumn("Status")}
           text={selectedStatus === "All" ? column.status : selectedStatus}
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
-          <DropDown isOpen={isOpenActions}>
+          <DropDown isOpen={activeColumn === "Status"}>
             {UsersStatuses.map((text, index) => (
               <div
                 key={index}
-                onClick={() => handleClickStatus(text)}
+                onClick={(e) => handleClickStatus(e, text)}
                 className="action-item cursor-pointer"
               >
                 <Text variant={TextVariants.subtitle_medium}>{text}</Text>

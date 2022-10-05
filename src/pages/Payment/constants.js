@@ -92,3 +92,18 @@ export const PaymentInfo = [
     mode: "Manual",
   },
 ];
+
+export const PaymentSearch = [
+  {
+    title: "User",
+  },
+  {
+    title: "Payment ID",
+  },
+  {
+    title: "Memo",
+  },
+  {
+    title: "Payment IP",
+  },
+];

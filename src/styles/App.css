@@ -1,6 +1,7 @@
 main {
   position: relative;
-  height: calc(100% - 53px);
+  min-height: calc(100% - 52px);
+  margin-top: 52px;
 }
 
 .App {

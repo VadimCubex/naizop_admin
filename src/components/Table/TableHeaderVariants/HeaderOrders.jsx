@@ -9,31 +9,42 @@ import { Button } from "../../Button";
 import { Checkbox } from "../../Checkbox";
 import { DropDown } from "../../DropDown";
 import { Text } from "../../Text";
-import { UsersStatuses } from "../constants";
+import {
+  OrdersMode,
+  OrdersService,
+  OrdersUsers,
+  UsersStatuses,
+} from "../constants";
+
+import { useTableSelector } from "../../../store/Tables/useTable";
+import { useTablesActions } from "../../../store/Tables/useTablesActions";
 
 const HeaderOrders = ({ column }) => {
   const [checked, setChecked] = useState(column.checked);
-  const [isOpenUser, setIsOpenUser] = useState(false);
-  const [isOpenService, setIsOpenService] = useState(false);
-  const [isOpenMode, setIsOpenMode] = useState(false);
+  const { activeColumn } = useTableSelector();
+  const { setActiveColumn } = useTablesActions();
 
   const [selectedUser, setSelectedUser] = useState(UsersStatuses[0]);
+  // eslint-disable-next-line no-unused-vars
   const [selectedService, setSelectedService] = useState(UsersStatuses[0]);
   const [selectedMode, setSelectedMode] = useState(UsersStatuses[0]);
 
-  const handleClickUser = (text) => {
-    setIsOpenUser(false);
+  const handleClickUser = (e, text) => {
+    setActiveColumn("");
     setSelectedUser(text);
+    e.stopPropagation();
   };
 
-  const handleClickService = (text) => {
-    setIsOpenService(false);
+  const handleClickService = (e, text) => {
+    setActiveColumn("");
     setSelectedService(text);
+    e.stopPropagation();
   };
 
-  const handleClickMode = (text) => {
-    setIsOpenMode(false);
+  const handleClickMode = (e, text) => {
+    setActiveColumn("");
     setSelectedMode(text);
+    e.stopPropagation();
   };
 
   return (
@@ -48,17 +59,17 @@ const HeaderOrders = ({ column }) => {
       </div>
       <div className="table-column-cell-3">
         <Button
-          className={classNames({ active: isOpenUser })}
-          onClick={() => setIsOpenUser(!isOpenUser)}
+          className={classNames({ active: activeColumn === "User" })}
+          onClick={() => setActiveColumn("User")}
           text={selectedUser === "All" ? column.user : selectedUser}
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
-          <DropDown isOpen={isOpenUser}>
-            {UsersStatuses.map((text, index) => (
+          <DropDown isOpen={activeColumn === "User"}>
+            {OrdersUsers.map((text, index) => (
               <div
                 key={index}
-                onClick={() => handleClickUser(text)}
+                onClick={(e) => handleClickUser(e, text)}
                 className="action-item cursor-pointer"
               >
                 <Text variant={TextVariants.subtitle_medium}>{text}</Text>
@@ -81,17 +92,17 @@ const HeaderOrders = ({ column }) => {
       </div>
       <div className="table-column-cell-8">
         <Button
-          className={classNames({ active: isOpenService })}
-          onClick={() => setIsOpenService(!isOpenService)}
-          text={selectedService === "All" ? column.service : selectedService}
+          className={classNames({ active: activeColumn === "Service" })}
+          onClick={() => setActiveColumn("Service")}
+          text={column.service}
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
-          <DropDown isOpen={isOpenService}>
-            {UsersStatuses.map((text, index) => (
+          <DropDown isOpen={activeColumn === "Service"}>
+            {OrdersService.map((text, index) => (
               <div
                 key={index}
-                onClick={() => handleClickService(text)}
+                onClick={(e) => handleClickService(e, text)}
                 className="action-item cursor-pointer"
               >
                 <Text variant={TextVariants.subtitle_medium}>{text}</Text>
@@ -111,17 +122,17 @@ const HeaderOrders = ({ column }) => {
       </div>
       <div className="table-column-cell-12">
         <Button
-          className={classNames({ active: isOpenMode })}
-          onClick={() => setIsOpenMode(!isOpenMode)}
+          className={classNames({ active: activeColumn === "Mode" })}
+          onClick={() => setActiveColumn("Mode")}
           text={selectedMode === "All" ? column.mode : selectedMode}
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
-          <DropDown isOpen={isOpenMode}>
-            {UsersStatuses.map((text, index) => (
+          <DropDown isOpen={activeColumn === "Mode"}>
+            {OrdersMode.map((text, index) => (
               <div
                 key={index}
-                onClick={() => handleClickMode(text)}
+                onClick={(e) => handleClickMode(e, text)}
                 className="action-item cursor-pointer"
               >
                 <Text variant={TextVariants.subtitle_medium}>{text}</Text>

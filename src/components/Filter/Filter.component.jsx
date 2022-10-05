@@ -24,6 +24,9 @@ export const FilterComponent = ({
   return (
     <div className={FilterClass}>
       <Input
+        className={classNames({
+          ["border-radius"]: !isShowButton && !isShowSelect,
+        })}
         leftSide={leftSide}
         placeholder={placeholder}
         value={value}

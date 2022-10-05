@@ -18,3 +18,14 @@
 .users .users-tools .export > .text {
   color: rgb(39, 73, 138);
 }
+
+@media (max-width: 600px) {
+  .users .users-tools {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .users .users-tools .export {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}

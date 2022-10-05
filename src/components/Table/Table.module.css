@@ -3,13 +3,37 @@
 @import "./TableVariantsStyles/TableVariantOrders.module.css";
 @import "./TableVariantsStyles/TableVariantPayments.module.css";
 @import "./TableVariantsStyles/TableVariantTickets.module.css";
+@import "./TableVariantsStyles/TableVariantProvider.module.css";
 
 .table {
   min-width: 1325px;
   display: flex;
   flex-direction: column;
   position: relative;
-  border: 1px solid rgb(201, 201, 201);
+  border-top: 1px solid rgb(201, 201, 201);
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.table-container {
+  width: 100%;
+  overflow: scroll hidden;
+  margin-top: 10px;
+  border-left: 1px solid rgb(201, 201, 201);
+  border-right: 1px solid rgb(201, 201, 201);
+}
+
+.table-container::-webkit-scrollbar {
+  display: none;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.table-item-length {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0px;
 }
 
 .table .table-content {
@@ -50,6 +74,12 @@
   gap: 4px;
 }
 
+.table .table-header .dropDown {
+  right: unset;
+  left: -1px;
+  width: fit-content;
+}
+
 .table .table-header [class*="table-column-cell"],
 .table .table-row [class*="table-row-cell"] {
   padding: 8px 4px 8px 8px;
@@ -70,6 +100,7 @@
   height: 7px !important;
   stroke: unset !important;
 }
+
 .table .table-row [class*="table-row-cell"] .button > div path {
   fill: #000;
 }

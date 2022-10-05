@@ -79,9 +79,12 @@ export const SortedBy = [
     title: "Ticket ID",
   },
   {
-    title: "the biggest",
+    title: "Subject",
   },
   {
-    title: "the smallest",
+    title: "Message",
+  },
+  {
+    title: "User",
   },
 ];

@@ -10,12 +10,12 @@ import { DropDown } from "../../DropDown";
 import { Text } from "../../Text";
 import { UsersActions } from "../constants";
 
-import { useUsersTableSelector } from "../../../store/Tables/UsersTable/useUsersTable";
+import { useTableSelector } from "../../../store/Tables/useTable";
 import { useTablesActions } from "../../../store/Tables/useTablesActions";
 
 const RowPayments = ({ item }) => {
-  const { activeAction } = useUsersTableSelector();
-  const { SetUserActiveAction } = useTablesActions();
+  const { activeAction } = useTableSelector();
+  const { setActiveAction } = useTablesActions();
 
   return (
     <div className="table-row-content">
@@ -57,7 +57,7 @@ const RowPayments = ({ item }) => {
           className={classNames("actions", {
             active: activeAction === item.id,
           })}
-          onClick={() => SetUserActiveAction(item.id)}
+          onClick={() => setActiveAction(item.id)}
           icon={IconsVariants.DropDown_arrow_fill}
         >
           <DropDown isOpen={activeAction === item.id}>
@@ -65,7 +65,7 @@ const RowPayments = ({ item }) => {
               <div
                 key={index}
                 onClick={(e) => {
-                  SetUserActiveAction("");
+                  setActiveAction("");
                   e.stopPropagation();
                 }}
                 className="action-item cursor-pointer"

@@ -112,3 +112,29 @@ export const OrdersInfo = [
     mode: "Auto",
   },
 ];
+
+export const OrdersSearch = [
+  {
+    title: "Order ID",
+  },
+  {
+    title: "Link",
+  },
+  {
+    title: "Username",
+  },
+  {
+    title: "Service ID",
+  },
+  {
+    title: "External ID",
+  },
+  {
+    title: "Provider",
+  },
+  {
+    title: "IP address",
+  },
+];
+
+export const OrdersSearchDate = ["Last 90 days", "Last year"];

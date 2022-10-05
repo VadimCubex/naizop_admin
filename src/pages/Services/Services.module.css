@@ -2,7 +2,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   position: relative;
-  height: 100%;
+  height: 925px;
 }
 
 .services .services-tools {
@@ -120,4 +120,16 @@
 
 .modal .modal-contant .double .service-add {
   flex-grow: 1;
+}
+
+@media (max-width: 600px) {
+  .services .services-tools .buttons,
+  .services .services-tools {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .services .services-tools .import {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
 }
