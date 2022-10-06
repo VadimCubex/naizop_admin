@@ -97,3 +97,31 @@
 .table.table-variant-orders .table-header .table-column-cell-12 .button {
   margin-left: -8px;
 }
+
+.table.table-variant-orders .table-header .service-dropDown {
+  width: 290px;
+}
+.table.table-variant-orders .table-header .service-dropDown .search {
+  display: flex;
+  padding: 0px 4px;
+}
+.table.table-variant-orders
+  .table-header
+  .service-dropDown
+  .search
+  .filter
+  .input,
+.table.table-variant-orders .table-header .service-dropDown .search .filter {
+  flex-grow: 1;
+}
+.table.table-variant-orders .table-header .service-dropDown .search .button {
+  margin: 0px;
+  border: none;
+}
+.table.table-variant-orders
+  .table-header
+  .service-dropDown
+  .search
+  .button:hover {
+  background: unset;
+}

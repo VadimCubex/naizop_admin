@@ -8,6 +8,7 @@ import {
 import { Button } from "../../Button";
 import { Checkbox } from "../../Checkbox";
 import { DropDown } from "../../DropDown";
+import { Filter } from "../../Filter";
 import { Text } from "../../Text";
 import {
   OrdersMode,
@@ -98,7 +99,21 @@ const HeaderOrders = ({ column }) => {
           iconPosition="right"
           icon={IconsVariants.DropDown_arrow_fill}
         >
-          <DropDown isOpen={activeColumn === "Service"}>
+          <DropDown
+            maxHeight={340}
+            className="service-dropDown"
+            isOpen={activeColumn === "Service"}
+          >
+            <div onClick={(e) => e.stopPropagation()} className="search">
+              <Filter
+                leftSide={<i className="fas fa-search"></i>}
+                placeholder={"Search"}
+                isShowButton={false}
+              />
+              <Button
+                iconUnicode={<i className="fas fa-sort-amount-down"></i>}
+              />
+            </div>
             {OrdersService.map((text, index) => (
               <div
                 key={index}
