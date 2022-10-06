@@ -110,9 +110,9 @@ const HeaderOrders = ({ column }) => {
                 placeholder={"Search"}
                 isShowButton={false}
               />
-              <Button
-                iconUnicode={<i className="fas fa-sort-amount-down"></i>}
-              />
+              <div className="button">
+                <i className="fas fa-sort-amount-down"></i>
+              </div>
             </div>
             {OrdersService.map((text, index) => (
               <div
